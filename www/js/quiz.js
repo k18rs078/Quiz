@@ -1,6 +1,6 @@
 // This is a JavaScript file
 //mobile backendのAPIキーを設定
-var ncmb = new NCMB("YOURAPPKEY","YOURCLIENTKEY");
+var ncmb = new NCMB(appKey,clientKey);
 
 
 //ページの初期化が完了したら実行される
