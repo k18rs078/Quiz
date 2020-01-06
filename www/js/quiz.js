@@ -52,6 +52,7 @@ function userLogin(isSignedUp){
     var callBack_Login = function(error, obj) {
         if (error) {
             //エラーコードの表示
+            $("#login_error").text("ログインに失敗しました");
             $("#login_error_msg").text("errorCode:" + error.code);
             $("#login_error_msg2").text("errorMessage:"+error.message);
         } else {
@@ -64,6 +65,7 @@ function userLogin(isSignedUp){
     var callBack_Account = function(error, obj) {
         if (error) {
             //エラーコードの表示
+            $("#login_error2").text("新規登録に失敗しました");
             $("#login_error_msg").text("errorCode:" + error.code);
             $("#login_error_msg2").text("errorMessage:"+error.message);
         } else {

@@ -2,22 +2,25 @@
     <div style="text-align: center">
         <h1>ログイン</h1>
         <p>
-            ユーザー名<br/>
+            ユーザー名<br>
             <input type="text" name="userName" id="user_name"/>
-            <br/>
-            パスワード<br/>
+            <br>
+            パスワード<br>
             <input type="text" name="password" id="password">
-            <br/>
-            <br/>
+            <br>
+            <br>
             <ons-button id="login_button" onclick="userLogin(false)">
             ログイン
             </ons-button>
-            <br/>
-            <br/>
+            <br>
+            <br>
             <ons-button id="signup_button" onclick="userLogin(true)">
-            または、新規登録
-            </ons-button><br/>
-            <div id="login_error_msg"></div>
+            新規登録
+            </ons-button><br>
+
+            <div id="login_error"></div><br>
+            <div id="login_error2"></div><br>
+            <div id="login_error_msg"></div><br>
             <div id="login_error_msg2"></div>
         </p>
     </div>
