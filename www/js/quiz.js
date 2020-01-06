@@ -52,7 +52,8 @@ function userLogin(isSignedUp){
     var callBack_Login = function(error, obj) {
         if (error) {
             //エラーコードの表示
-            $("#login_error_msg").text("errorCode:" + error.code + ", errorMessage:" + error.message);
+            $("#login_error_msg").text("errorCode:" + error.code);
+            $("#login_error_msg2").text("errorMessage:"+error.message);
         } else {
             //メニュー画面に遷移
             quizNavi.pushPage("menu.html");
@@ -63,7 +64,8 @@ function userLogin(isSignedUp){
     var callBack_Account = function(error, obj) {
         if (error) {
             //エラーコードの表示
-            $("#login_error_msg").text("errorCode:" + error.code + ", errorMessage:" + error.message);
+            $("#login_error_msg").text("errorCode:" + error.code);
+            $("#login_error_msg2").text("errorMessage:"+error.message);
         } else {
             //ログインを実行
            ncmb.User.login(userName, password, callBack_Login);
