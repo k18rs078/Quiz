@@ -134,10 +134,11 @@ function createQuiz(){
     var option1 = $("#option1").val();
     var option2 = $("#option2").val();
     var option3 = $("#option3").val();
+    var option4 = $("#option4").val();
     
     //空の要素がないことを確認する
     if (quizText !== "" && answer !== "" &&
-        option1 !== "" && option2 !== "" && option3 !== ""){
+        option1 !== "" && option2 !== "" && option3 !== "" && option4 !== ""){
         //クイズクラスのインスタンスを作成する
         var QuizClass = ncmb.DataStore("Quiz");
         var quiz = new QuizClass();
@@ -145,7 +146,7 @@ function createQuiz(){
         //取得したクイズの内容をセットし、mobile backendにクイズを登録する
         quiz.set("quizText", quizText)
             .set("answer", answer)
-            .set("options", [option1, option2, option3])
+            .set("options", [option1, option2, option3, option4])
             .save()
             .then(function(object) {
                 $("#create_button_area").hide();
